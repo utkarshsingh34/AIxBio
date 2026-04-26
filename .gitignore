@@ -1,0 +1,95 @@
+# =============================================================================
+# Sensitive data — NEVER commit
+# =============================================================================
+# Real hazardous reference (toxin sequences, etc.). The placeholder is OK to commit.
+data/hazardous.fasta
+data/hazardous_data/
+data/hazardous_manifest.tsv
+
+# =============================================================================
+# Generated / derived data — regeneratable, no need to commit
+# =============================================================================
+# Honest source genome (downloadable from NCBI via fetch_data.py)
+data/honest_source.fasta
+
+# Corpora — produced by build_corpus.py at any (T, mutation rate)
+data/corpora/
+
+# BLAST DB index files — produced by makeblastdb
+pipeline/hazardous_db.*
+pipeline/*.nhr
+pipeline/*.nin
+pipeline/*.nsq
+pipeline/*.ndb
+pipeline/*.ntf
+pipeline/*.nto
+pipeline/*.not
+pipeline/*.njs
+pipeline/*.phr
+pipeline/*.pin
+pipeline/*.psq
+pipeline/*.pdb
+pipeline/*.ptf
+pipeline/*.pto
+pipeline/*.pot
+
+# Benchmark scratch directory
+pipeline/_benchmark_sandbox/
+
+# Per-corpus intermediate output (regeneratable from corpora + screen.py)
+**/*_hits.tsv
+**/*_fragments.csv
+**/*_orders.csv
+**/corpus_meta.json
+
+# =============================================================================
+# Python
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# =============================================================================
+# IDE / editor
+# =============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# =============================================================================
+# OS
+# =============================================================================
+desktop.ini
+$RECYCLE.BIN/
