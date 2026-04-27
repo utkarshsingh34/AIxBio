@@ -1,5 +1,3 @@
-#This is a placeholder README, we should write our own before submitting.
-
 # BLAST sensitivity benchmark for DNA synthesis screening
 
 A pipeline that quantifies how BLAST's detection of hazardous DNA sequences degrades as adversaries fragment **and mutate** the input. Built for the AIxBio hackathon to inform the policy debate around minimum DNA synthesis screening thresholds.
